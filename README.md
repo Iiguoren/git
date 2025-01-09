@@ -1,2 +1,1 @@
-# git
-git practice
+git学习，常用指令，常用流程
