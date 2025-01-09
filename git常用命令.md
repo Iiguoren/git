@@ -76,13 +76,15 @@ git ls-files 只显示 Git 跟踪的文件。未跟踪的文件（即那些没�
    `git remote add origin https://github.com/LZX-ZNRA/learngit.git`将本地仓库与远程仓库关联
 3. 将某个分支(master)推送到远程仓库
    `git push -u origin master`
-   -u参数的作用：由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。
+   -u参数的作用：由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就会直接将该本地分支推送到origin,可以简化命令。
 
-   使用`git push`推送某个本地分支时，Git 会在远程仓库（例如 origin）创建一个与**本地分支同名**的远程分支
+   使用`git push`推送某个本地分支时，Git 会在远程仓库（例如 origin）创建一个与**本地分支同名**(master)的远程分支
    如果远程仓库已经有一个同名的分支，Git 会将本地分支的提交推送到远程仓库中的该分支。
 简化后：`git push`   
  
 ### 不同分支推送
+推送不同分支到origin:
+`git push origin <my-branch>`
 如果你想将本地分支推送到远程的一个不同名称的分支，你可以通过指定远程分支的名称来实现。
 `git push origin my-branch:remote-branch`
 如果远程的 remote-branch 分支不存在，Git 会创建它
@@ -98,9 +100,9 @@ git ls-files 只显示 Git 跟踪的文件。未跟踪的文件（即那些没�
 ### 查看所有分支
 `git branch -a`
 ### 切换到指定分支
-git checkout <branchname>
+`git checkout <branchname>`
 ### 删除分支
-git branch -d <branchname>
+`git branch -d <branchname>`
  
 ## 克隆仓库
 把当前分支（即远程仓库的默认分支，通常是 master 或 main）检出到本地工作目录。
