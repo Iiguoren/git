@@ -6,6 +6,7 @@
 ## 初始化
 在repo中：
 `git init`初始化一个仓库，执行 git init 后，Git 会在你的项目目录中创建一个 .git 文件夹，这是 Git 用来管理版本控制信息的地方。
+此时并没有发布master branch，在第一次commmit自动创建
 **只是一个本地仓库，还没有与 GitHub 上的任何仓库关联**
 ### 暂存区
 将文件添加到git仓库的暂存区： `git add git.md`
@@ -101,6 +102,9 @@ git ls-files 只显示 Git 跟踪的文件。未跟踪的文件（即那些没�
 `git branch -a`
 ### 切换到指定分支
 `git checkout <branchname>`
+### 增加分支
+`git branch <branchname>`
+创建一个新的分支时，它会继承当前所在分支的内容和状态。这意味着新分支会从当前分支的最新提交开始，复制该分支的所有文件、提交记录和更改。
 ### 删除分支
 `git branch -d <branchname>`
  
